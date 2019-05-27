@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Tunas Cahaya Mandiri Widyatama</title>
+    
+    <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -29,19 +31,49 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
-                            <span class="sr-only">(current)</span>
-                        </a>
+                    <li class="nav-item">
+                        @if ( $nav == 'home' )
+                        <div class="active">
+                        @endif
+                            <a class="nav-link" href="/">Home
+                                @if ( $nav == 'home' ) <span class="sr-only">(current)</span> @endif
+                            </a>
+                        @if ( $nav == 'home' )
+                        </div>
+                        @endif
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        @if ( $nav == 'services' )
+                        <div class="active">
+                        @endif
+                            <a class="nav-link" href="/services">Services
+                                @if ( $nav == 'services' ) <span class="sr-only">(current)</span> @endif
+                            </a>
+                        @if ( $nav == 'services' )
+                        </div>
+                        @endif
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
+                            @if ( $nav == 'about' )
+                            <div class="active">
+                            @endif
+                                <a class="nav-link" href="/about">About
+                                    @if ( $nav == 'about' ) <span class="sr-only">(current)</span> @endif
+                                </a>
+                            @if ( $nav == 'about' )
+                            </div>
+                            @endif
+                        </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        @if ( $nav == 'contact' )
+                        <div class="active">
+                        @endif
+                            <a class="nav-link" href="/contact">Contact
+                                @if ( $nav == 'contact' ) <span class="sr-only">(current)</span> @endif
+                            </a>
+                        @if ( $nav == 'contact' )
+                        </div>
+                        @endif
                     </li>
                 </ul>
             </div>
@@ -55,11 +87,10 @@
         <div class="footer-bs">
             <div class="row">
                 <div class="col-md-6 footer-brand animated fadeInLeft">
-                    <h2>About us </h2>
-                    <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies.
-                        Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque
-                        ex mi ut sem.</p>
-                    <p>© 2014 BS3 UI Kit, All rights reserved</p>
+                    <h4>PT. Tunas Cahaya Mandiri Widyatama</h4>
+                    <p>Founded in February, 11’ 2008, as a company that have a specializing on the Supply Spare part, Service and Maintenance Equipment in telecommunication sector.</p>
+                    <p>Our Vision to be a reliable partner in all areas of telecommunications. In addition to support it we also have a reliable human resources team, an  professionals engineer who can provide the best services in all area that we serve.</p>
+                    <p>World Telecom is a competitive world, where any delay would result in losses for the company. Therefore we always do a perfect job with the preparation and structural operating system so that it can be completed in a timely manner.</p>
                 </div>
                 <div class="col-md-6 footer-nav animated fadeInUp">
                     <h2>Latest News</h2>
@@ -73,24 +104,54 @@
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-footer navbar-dark" style="background-color: #222f3e;">
+        <nav class="navbar navbar-expand-lg navbar-footer navbar-light" style="background-color: #222f3e;">
             <div class="container">
                 <a class="navbar-brand" href="">©2019 - PT Tunas Cahaya Mandiri Widyatama</a>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
+                        <li class="nav-item">
+                            @if ( $nav != 'home' )
+                            <div class="active">
+                            @endif
+                                <a class="nav-link" href="/">Home
+                                    @if ( $nav != 'home' ) <span class="sr-only">(current)</span> @endif
+                                </a>
+                            @if ( $nav != 'home' )
+                            </div>
+                            @endif
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">About</a>
+                            @if ( $nav != 'services' )
+                            <div class="active">
+                            @endif
+                                <a class="nav-link" href="/services">Services
+                                    @if ( $nav != 'services' ) <span class="sr-only">(current)</span> @endif
+                                </a>
+                            @if ( $nav != 'services' )
+                            </div>
+                            @endif
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Services</a>
+                            @if ( $nav != 'about' )
+                            <div class="active">
+                            @endif
+                                <a class="nav-link" href="/about">About
+                                    @if ( $nav != 'about' ) <span class="sr-only">(current)</span> @endif
+                                </a>
+                            @if ( $nav != 'about' )
+                            </div>
+                            @endif
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Contact</a>
+                            @if ( $nav != 'contact' )
+                            <div class="active">
+                            @endif
+                                <a class="nav-link" href="/contact">Contact
+                                    @if ( $nav != 'contact' ) <span class="sr-only">(current)</span> @endif
+                                </a>
+                            @if ( $nav != 'contact' )
+                            </div>
+                            @endif
                         </li>
                     </ul>
                 </div>

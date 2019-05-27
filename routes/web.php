@@ -15,6 +15,10 @@
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('tcmw/home');
-});
+Route::get('/', 'TCMW\HomeController@home');
+
+Route::get('/services', 'TCMW\HomeController@services');
+
+Route::get('/about', 'TCMW\HomeController@about');
+
+Route::get('/contact', 'TCMW\HomeController@contact');
