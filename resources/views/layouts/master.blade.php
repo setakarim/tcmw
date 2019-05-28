@@ -22,7 +22,7 @@
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-custom navbar-light fixed-top shadow">
-        <div class="container" style="padding: 12px;">
+        <div class="container" style="padding: 8px;">
             <a class="navbar-brand" href="#">
                 <img src="{{asset('img/logo.png')}}" class="navbar-brand-img">
             </a>
@@ -87,10 +87,10 @@
         <div class="footer-bs">
             <div class="row">
                 <div class="col-md-6 footer-brand animated fadeInLeft">
-                    <h4>PT. Tunas Cahaya Mandiri Widyatama</h4>
+                    <h2>PT. Tunas Cahaya Mandiri Widyatama</h2>
                     <p>Founded in February, 11’ 2008, as a company that have a specializing on the Supply Spare part, Service and Maintenance Equipment in telecommunication sector.</p>
                     <p>Our Vision to be a reliable partner in all areas of telecommunications. In addition to support it we also have a reliable human resources team, an  professionals engineer who can provide the best services in all area that we serve.</p>
-                    <p>World Telecom is a competitive world, where any delay would result in losses for the company. Therefore we always do a perfect job with the preparation and structural operating system so that it can be completed in a timely manner.</p>
+                    <p><a href="/about">Read more..</a></p>
                 </div>
                 <div class="col-md-6 footer-nav animated fadeInUp">
                     <h2>Latest News</h2>

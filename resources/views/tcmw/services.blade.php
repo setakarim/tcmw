@@ -31,6 +31,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+</header>
 
     <h1>Services</h1>
     
