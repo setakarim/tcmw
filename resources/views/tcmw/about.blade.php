@@ -2,12 +2,12 @@
 
 @section('content')
 
-<header class="masthead" style="background-image:url({{asset('img/slider2.png')}})"> </header>
+<header class="masthead" style="background-image:url({{asset('img/slider2.png')}});"> </header>
 
 <div class="container container-padding" >
     <div class="row align-items-center">
         <div class="col-12 text-center">
-            <h1>About Us</h1>
+            <h1 class="contentTitle">About Us</h1>
         </div>
         <div class="hr"></div>
     </div>

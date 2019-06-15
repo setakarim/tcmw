@@ -38,7 +38,7 @@
     <div class="icon-about-title">
         <div class="row align-items-center ">
             <div class="col-12 text-center">
-                <h1 class="font-weight-bold">Corporate Governance</h1>
+                <h1 class="font-weight-bold contentTitle">Corporate Governance</h1>
             </div>
             <div class="hr"></div>
         </div>
