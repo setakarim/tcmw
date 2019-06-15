@@ -22,3 +22,5 @@ Route::get('/services', 'TCMW\HomeController@services');
 Route::get('/about', 'TCMW\HomeController@about');
 
 Route::get('/contact', 'TCMW\HomeController@contact');
+
+Route::get('/login', 'TCMW\HomeController@login');
