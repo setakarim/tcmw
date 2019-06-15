@@ -4,7 +4,7 @@
 
 <header class="masthead" style="background-image:url({{asset('img/slider2.png')}})"> </header>
 
-<div class="container container-padding">
+<div class="container container-padding" >
     <div class="row align-items-center">
         <div class="col-12 text-center">
             <h1>About Us</h1>
@@ -26,7 +26,7 @@
                         <div class="card-header card-header-color">
                             <div class="nav-tabs-navigation">
                                 <div class="nav-tabs-wrapper">
-                                    <ul class="nav nav-tabs" data-tabs="tabs">
+                                    <ul class="nav nav-tabs" data-tabs="tabs" style="margin: auto;">
                                         <li class="nav-item">
                                             <a class="nav-link active" href="#vision" data-toggle="tab">Vision</a>
                                         </li>
@@ -57,10 +57,40 @@
     </div>
 </div>
 
-<div class="container">
-        <div class="row">
-                <p>shasda</p>
+<div class="container container-padding" style="background-color: #F8F8F8">
+    <div class="row">
+        <div class="col-md-5" style="margin: auto;">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <h1 style="font-size: 64px">240</h1>
+                    <p>Amount Staff</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h1 style="font-size: 64px">90</h1>
+                    <p>Car Operational</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h1 style="font-size: 64px">45</h1>
+                    <p>Motorcycle Operasional</p>
+                </div>
             </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+            <div class="row">
+                <h3 style="margin-bottom: 24px;">We currently focus on various areas including :</h3>
+                <ul>
+                    <li>Southern Sumatera (Jambi, Lampung, Palembang, Bangka & Belitung, Bengkulu)</li>
+                    <li>West Sumatera (Padang, Pekanbaru, Medan, Batam)</li>
+                    <li>Jabodetabek</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
+
+    <div class="container container-padding">
+
+    </div>
 
 @endsection

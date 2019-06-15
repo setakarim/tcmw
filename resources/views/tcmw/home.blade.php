@@ -34,7 +34,7 @@
 </header>
 
 <!-- Corporate Governance -->
-<div class="container container-padding ">
+<div class="container container-padding">
     <div class="icon-about-title">
         <div class="row align-items-center ">
             <div class="col-12 text-center">

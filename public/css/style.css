@@ -199,15 +199,6 @@ div.card .card-header-color {
     box-shadow: none
 }
 
-
-.card-nav-tabs .card-header {
-    margin-top: -30px!important;
-}
-
-.card .card-header .nav-tabs {
-    padding: 0;
-}
-
 .nav-tabs {
     border: 0;
     border-radius: 3px;
