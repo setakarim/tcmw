@@ -24,3 +24,8 @@ Route::get('/about', 'TCMW\HomeController@about');
 Route::get('/contact', 'TCMW\HomeController@contact');
 
 Route::get('/login', 'TCMW\HomeController@login');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
