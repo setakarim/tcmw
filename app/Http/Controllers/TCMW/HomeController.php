@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\TCMW;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
@@ -22,14 +21,18 @@ class HomeController extends Controller
     {
         return view('tcmw/about', ['nav' => 'about']);
     }
+    public function aboutStructure()
+    {
+        return view('tcmw/about_structure', ['nav' => 'about']);
+    }
+    public function aboutPRL()
+    {
+        return view('tcmw/about_prl', ['nav' => 'about']);
+    }
 
     public function contact()
     {
         return view('tcmw/contact', ['nav' => 'contact']);
     }
-
-    public function login()
-    {
-        return view('tcmw/login', ['nav' => 'login']);
-    }
+    
 }
