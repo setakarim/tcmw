@@ -61,8 +61,8 @@
                             <a href="#" class="nav-link" data-toggle="dropdown">About <i class="fa fa-caret-down"></i></a>
                             <div class="dropdown-content">
                                 <a href="/about">About Us</a>
-                                <a href="/aboutStructure">Structure Organization</a>
-                                <a href="/aboutPRL">Project Reference List</a>
+                                <a href="/about_structure">Structure Organization</a>
+                                <a href="/about_rpl">Project Reference List</a>
                             </div>
 
                                 {{-- <a class="nav-link" href="/about">About

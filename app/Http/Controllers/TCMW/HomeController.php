@@ -34,9 +34,5 @@ class HomeController extends Controller
     {
         return view('tcmw/contact', ['nav' => 'contact']);
     }
-
-    public function login()
-    {
-        return view('tcmw/login', ['nav' => 'login']);
-    }
+    
 }

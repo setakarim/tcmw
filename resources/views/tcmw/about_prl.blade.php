@@ -2,7 +2,7 @@
 
 @section('content')
 
-<header class="masthead" style="background-image:url({{asset('img/bg2.jpg')}});"> </header>
+<header class="masthead" style="background-image:url({{asset('img/slider5.png')}});"> </header>
 
 <div class="container container-padding" >
     <div class="row align-items-center">
