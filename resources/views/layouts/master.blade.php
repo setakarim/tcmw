@@ -73,6 +73,17 @@
                         @endif
                     </li>
                     <li class="nav-item">
+                        @if ( $nav == 'news' )
+                        <div class="active">
+                        @endif
+                            <a class="nav-link" href="/news">News
+                                @if ( $nav == 'news' ) <span class="sr-only">(current)</span> @endif
+                            </a>
+                        @if ( $nav == 'news' )
+                        </div>
+                        @endif
+                    </li>
+                    <li class="nav-item">
                         @if ( $nav == 'contact' )
                         <div class="active">
                         @endif

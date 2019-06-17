@@ -363,3 +363,30 @@ div.card .card-header-color {
 .nav .nav-item {
     position: relative;
 }
+
+.news {
+    margin-bottom: 36px;
+}
+
+.news a {
+    text-decoration: none;
+}
+
+.news img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.news h4 {
+    color: #222f3e;
+}
+
+.news h4:hover {
+    color: #16a085;
+}
+
+.news p {
+    color: #000000;
+    font-size: 14px;
+}
