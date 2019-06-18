@@ -14,11 +14,8 @@
 
     <div class="row" style="margin-top: 64px;">
         <div class="col-md-7 text-right">
-
-            <h5 class="font-weight-bold">PT. Tunas Cahaya Mandiri Widyatama</h5>
-            <p>Founded in February, 11’ 2008, as a company that have a specializing on the Supply Spare part, Service and Maintenance Equipment in telecommunication sector.</p>
-            <p>Our Vision to be a reliable partner in all areas of telecommunications. In addition to support it we also have a reliable human resources team, an  professionals engineer who can provide the best services in all area that we serve.</p>
-            <p>World Telecom is a competitive world, where any delay would result in losses for the company. Therefore we always do a perfect job with the preparation and structural operating system so that it can be completed in a timely manner.</p>
+            
+            <p>{!! $pages !!}</p>
             
             <div class="row" style="margin-top: 64px;">
                  <!-- Tabs on Plain Card -->

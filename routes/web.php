@@ -27,16 +27,9 @@ Route::get('/contact', 'TCMW\HomeController@contact');
 
 Route::get('/login', 'TCMW\HomeController@login');
 
-Route::get('/news', function () {
-    $posts = TCG\Voyager\Models\Post::all();
-    return view('tcmw\news', ['nav' => 'news'], compact('posts'));
-});
+Route::get('/news', 'TCMW\NewsController@news');
 
-Route::get('news/{slug}', function($slug){
-    $post = TCG\Voyager\Models\Post::where('slug', '=', $slug)->firstOrFail();
-    // $taglessBody = strip_tags($post->body);
-	return view('tcmw\news_single', ['nav' => 'news'], compact('post'));
-});
+Route::get('news/{slug}', 'TCMW\NewsController@show');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

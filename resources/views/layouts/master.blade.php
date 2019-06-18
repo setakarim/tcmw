@@ -21,9 +21,9 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom navbar-light fixed-top shadow" >
+    <nav class="navbar navbar-expand-lg navbar-custom navbar-light @if ( $nav != 'services' ) fixed-top @endif shadow" >
         <div class="container" style="padding: 8px;">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="{{asset('img/logo.png')}}" class="navbar-brand-img">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,75 +105,41 @@
     <footer>
         <div class="footer-bs">
             <div class="row">
-                <div class="col-md-6 footer-brand animated fadeInLeft">
+                <div class="col-md-4 footer-brand animated fadeInLeft">
                     <h3>PT. Tunas Cahaya Mandiri Widyatama</h3>
                     <p>Founded in February, 11’ 2008, as a company that have a specializing on the Supply Spare part, Service and Maintenance Equipment in telecommunication sector.</p>
                     <p>Our Vision to be a reliable partner in all areas of telecommunications. In addition to support it we also have a reliable human resources team, an  professionals engineer who can provide the best services in all area that we serve.</p>
                     <p><a href="/about">Read more..</a></p>
                 </div>
-                <div class="col-md-6 footer-nav animated fadeInUp">
+                <div class="col-md-8 footer-nav animated fadeInUp">
                     <h3>Latest News</h3>
-                    <ul class="pages">
-                        <li><a href="#">Travel</a></li>
-                        <li><a href="#">Nature</a></li>
-                        <li><a href="#">Explores</a></li>
-                        <li><a href="#">Science</a></li>
-                        <li><a href="#">Advice</a></li>
-                    </ul>
+                    <div class="pages">
+                        <div class="row">
+                        @foreach($posts->reverse() as $post)
+                            <div class="col-md-6 news" >                 
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="{{ Voyager::image( $post->image ) }}">
+                                    </div>
+                                    <div class="col-8">
+                                        <a href="/news/{{ $post->slug }}">{{ $post->title }}</a>
+                                        <p>{{ str_limit(strip_tags($post->body), 80) }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            @if ($loop->iteration == 2)
+                                @break
+                            @endif
+                        @endforeach
+                        </div>
+                    </div>
                 </div>
+                
             </div>
         </div>
         <nav class="navbar navbar-expand-lg navbar-footer navbar-light" style="background-color: #222f3e;">
             <div class="container">
-                <a class="navbar-brand" href="/">©2019 - PT Tunas Cahaya Mandiri Widyatama</a>
-                {{-- <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            @if ( $nav != 'home' )
-                            <div class="active">
-                            @endif
-                                <a class="nav-link" href="/">Home
-                                    @if ( $nav != 'home' ) <span class="sr-only">(current)</span> @endif
-                                </a>
-                            @if ( $nav != 'home' )
-                            </div>
-                            @endif
-                        </li>
-                        <li class="nav-item">
-                            @if ( $nav != 'services' )
-                            <div class="active">
-                            @endif
-                                <a class="nav-link" href="/services">Services
-                                    @if ( $nav != 'services' ) <span class="sr-only">(current)</span> @endif
-                                </a>
-                            @if ( $nav != 'services' )
-                            </div>
-                            @endif
-                        </li>
-                        <li class="nav-item">
-                            @if ( $nav != 'about' )
-                            <div class="active">
-                            @endif
-                                <a class="nav-link" href="/about">About
-                                    @if ( $nav != 'about' ) <span class="sr-only">(current)</span> @endif
-                                </a>
-                            @if ( $nav != 'about' )
-                            </div>
-                            @endif
-                        </li>
-                        <li class="nav-item">
-                            @if ( $nav != 'contact' )
-                            <div class="active">
-                            @endif
-                                <a class="nav-link" href="/contact">Contact
-                                    @if ( $nav != 'contact' ) <span class="sr-only">(current)</span> @endif
-                                </a>
-                            @if ( $nav != 'contact' )
-                            </div>
-                            @endif
-                        </li>
-                    </ul>
-                </div> --}}
+                <a class="navbar-brand mr-auto ml-auto" href="/">©2019 - PT Tunas Cahaya Mandiri Widyatama</a>
             </div>
         </nav>
     </footer>

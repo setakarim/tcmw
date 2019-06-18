@@ -43,7 +43,6 @@
             <div class="hr"></div>
         </div>
     </div>
-    
 
     <div class="row">
         <div class="col-md-4 icon-about">
@@ -88,7 +87,9 @@
                 <p style="color: #fff">Our scope of work include</p>
             </div>
             <div class="col-md-2 ml-auto" style="margin: auto;">
-                <button type="button" class="btn btn-outline-light" style="padding: 12px 24px;">Scope of Work</button>
+                <a href="/services">
+                    <button type="button" class="btn btn-outline-light" style="padding: 12px 24px;">Scope of Work</button>
+                </a>
             </div>
         </div>
     </div>

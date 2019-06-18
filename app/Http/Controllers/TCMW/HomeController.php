@@ -3,36 +3,45 @@
 namespace App\Http\Controllers\TCMW;
 
 use App\Http\Controllers\Controller;
+use TCG\Voyager\Models\Post;
+use TCG\Voyager\Models\Page;
 
 class HomeController extends Controller
 {
     //
     public function home()
     {
-        return view('tcmw/home', ['nav' => 'home']);
+        $posts = Post::all();
+        return view('tcmw/home', ['nav' => 'home'], compact('posts'));
     }
 
     public function services()
     {
-        return view('tcmw/services', ['nav' => 'services']);
+        $posts = Post::all();
+        return view('tcmw/services', ['nav' => 'services'], compact('posts'));
     }
 
     public function about()
     {
-        return view('tcmw/about', ['nav' => 'about']);
+        $posts = Post::all();
+        $pages = Page::where('slug', '=', 'about')->firstOrFail()->body;
+        return view('tcmw/about', ['nav' => 'about'], compact('posts', 'pages'));
     }
     public function aboutStructure()
     {
-        return view('tcmw/about_structure', ['nav' => 'about']);
+        $posts = Post::all();
+        return view('tcmw/about_structure', ['nav' => 'about'], compact('posts'));
     }
     public function aboutPRL()
     {
-        return view('tcmw/about_prl', ['nav' => 'about']);
+        $posts = Post::all();
+        return view('tcmw/about_prl', ['nav' => 'about'], compact('posts'));
     }
 
     public function contact()
     {
-        return view('tcmw/contact', ['nav' => 'contact']);
+        $posts = Post::all();
+        return view('tcmw/contact', ['nav' => 'contact'], compact('posts'));
     }
     
 }
