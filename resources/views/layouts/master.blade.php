@@ -83,7 +83,7 @@
                         </div>
                         @endif
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         @if ( $nav == 'contact' )
                         <div class="active">
                         @endif
@@ -93,7 +93,7 @@
                         @if ( $nav == 'contact' )
                         </div>
                         @endif
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>
