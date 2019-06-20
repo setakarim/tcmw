@@ -422,12 +422,19 @@ div.card .card-header-color {
     padding-top: 12px;
 }
 
-.make-me-sticky a {
+/* Style the buttons */
+.make-me-sticky .content-side {
     color: #050505;
     text-decoration: none;
 }
 
-.make-me-sticky a:hover {
+.make-me-sticky .content-side:hover {
+    color: #16a08580;
+    text-decoration: none;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.make-me-sticky .active {
     color: #16a085;
     text-decoration: none;
 }

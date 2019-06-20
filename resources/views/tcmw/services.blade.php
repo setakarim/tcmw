@@ -81,21 +81,21 @@
         </div>
         <div class="col-md-4">
             <div class="sidebar-item">
-                <div class="make-me-sticky">
-                    <h5><a href="#1">New connection and Upgrade PLN</a></h5>
-                    <h5><a href="#2">Supply, Repair and Improvement Grounding</a></h5>
-                    <h5><a href="#3">Supply and Install OB Light</a></h5>
-                    <h5><a href="#4">Service Maintenance and Overhaul Genset</a></h5>
-                    <h5><a href="#5">Service Maintenance and Install Air Conditioner</a></h5>
-                    <h5><a href="#6">Environment Service and Power Backup Service</a></h5>
-                    <h5><a href="#7">Service and Repair Module Rectifier</a></h5>
-                    <h5><a href="#8">Maintenance and ServiceTrafo PLN</a></h5>
-                    <h5><a href="#9">Supply Install Panel ATS, AMF, COS</a></h5>
-                    <h5><a href="#10">Supply Sparepart Genset and electrical</a></h5>
-                    <h5><a href="#11">Supply Refuel Solar</a></h5>
-                    <h5><a href="#12">Manage Service Resources</a></h5>
-                    <h5><a href="#13">Service Maintenance Fiber Optic</a></h5>
-                    <h5><a href="#14">CME Colocation Outdoor</a></h5>
+                <div class="make-me-sticky" id="sidebar-services">
+                    <h5><a href="#1" class="content-side active">New connection and Upgrade PLN</a></h5>
+                    <h5><a href="#2" class="content-side">Supply, Repair and Improvement Grounding</a></h5>
+                    <h5><a href="#3" class="content-side">Supply and Install OB Light</a></h5>
+                    <h5><a href="#4" class="content-side">Service Maintenance and Overhaul Genset</a></h5>
+                    <h5><a href="#5" class="content-side">Service Maintenance and Install Air Conditioner</a></h5>
+                    <h5><a href="#6" class="content-side">Environment Service and Power Backup Service</a></h5>
+                    <h5><a href="#7" class="content-side">Service and Repair Module Rectifier</a></h5>
+                    <h5><a href="#8" class="content-side">Maintenance and ServiceTrafo PLN</a></h5>
+                    <h5><a href="#9" class="content-side">Supply Install Panel ATS, AMF, COS</a></h5>
+                    <h5><a href="#10" class="content-side">Supply Sparepart Genset and electrical</a></h5>
+                    <h5><a href="#11" class="content-side">Supply Refuel Solar</a></h5>
+                    <h5><a href="#12" class="content-side">Manage Service Resources</a></h5>
+                    <h5><a href="#13" class="content-side">Service Maintenance Fiber Optic</a></h5>
+                    <h5><a href="#14" class="content-side">CME Colocation Outdoor</a></h5>
                 </div>
             </div>
         </div>
