@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\TCMW;
 
 use App\Http\Controllers\Controller;
-use TCG\Voyager\Models\Post;
 use TCG\Voyager\Models\Page;
+use TCG\Voyager\Models\Post;
 
 class HomeController extends Controller
 {
@@ -27,6 +27,7 @@ class HomeController extends Controller
         $pages = Page::where('slug', '=', 'about')->firstOrFail()->body;
         return view('tcmw/about', ['nav' => 'about'], compact('posts', 'pages'));
     }
+
     public function aboutStructure()
     {
         $posts = Post::all();
@@ -43,5 +44,5 @@ class HomeController extends Controller
         $posts = Post::all();
         return view('tcmw/contact', ['nav' => 'contact'], compact('posts'));
     }
-    
+
 }

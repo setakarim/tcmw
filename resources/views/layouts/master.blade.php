@@ -58,12 +58,15 @@
                         @if ( $nav == 'about' )
                         <div class="active">
                         @endif
-                            <a href="#" class="nav-link" data-toggle="dropdown">About <i class="fa fa-caret-down"></i></a>
-                            <div class="dropdown-content">
+                        <a class="nav-link" href="/about">About
+                            @if ( $nav == 'about' ) <span class="sr-only">(current)</span> @endif
+                        </a>
+                            {{-- <a href="#" class="nav-link" data-toggle="dropdown">About <i class="fa fa-caret-down"></i></a> --}}
+                            {{-- <div class="dropdown-content">
                                 <a href="/about">About Us</a>
                                 <a href="/about_structure">Structure Organization</a>
                                 <a href="/about_rpl">Project Reference List</a>
-                            </div>
+                            </div> --}}
 
                                 {{-- <a class="nav-link" href="/about">About
                                     @if ( $nav == 'about' ) <span class="sr-only">(current)</span> @endif
@@ -83,7 +86,7 @@
                         </div>
                         @endif
                     </li>
-                    {{-- <li class="nav-item">
+                    <li class="nav-item">
                         @if ( $nav == 'contact' )
                         <div class="active">
                         @endif
@@ -93,7 +96,7 @@
                         @if ( $nav == 'contact' )
                         </div>
                         @endif
-                    </li> --}}
+                    </li>
                 </ul>
             </div>
         </div>

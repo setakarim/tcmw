@@ -2,36 +2,46 @@
 
 @section('content')
 
-<!-- header -->
-<header style="margin-top: 24pt">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ asset('img/slider1.png') }}" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('img/slider2.png') }}" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('img/slider3.png') }}" class="d-block w-100">
-            </div>
+<header class="masthead" style="background-image:url({{asset('img/slider6.jpg')}});"> </header>
+
+<div class="container container-padding" >
+    <div class="row align-items-center">
+        <div class="col-12 text-center">
+            <h1 class="contentTitle">Contact</h1>
         </div>
-
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+        <div class="hr"></div>
     </div>
-</header>
 
-    <h1>Contact</h1>
+    <div class="row" style="margin-top: 64px;">
+        <div class="col-md-6" style="padding-right: 50px;">
+            <h6><b>PT. TUNAS CAHAYA MANDIRI WIDYATAMA</b></h6>
+            <p>Unnamed Road, Ilir Tim. II, 30961, 8 Ilir, Ilir Timur II, Palembang City, South Sumatra 30961</p>
+            <i class="fas fa-phone"><span> (+6231) 5996007-9</span></i> <br>
+            <i class="far fa-envelope"><span> info@karuniaindah.net</span></i> 
+        </div>
+        <div class="col-md-6">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="exampleInputName">Name</label>
+                            <input type="text" class="form-control" id="exampleInputName" placeholder="Name">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputSubject">Subject</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputMessage">Message</label>
+                        <textarea class="form-control" rows="5" id="message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+    </div>
+</div>
 @endsection
