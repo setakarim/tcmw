@@ -109,10 +109,10 @@
         <div class="footer-bs">
             <div class="row">
                 <div class="col-md-4 footer-brand animated fadeInLeft">
-                    <h3>PT. Tunas Cahaya Mandiri Widyatama</h3>
-                    <p>Founded in February, 11’ 2008, as a company that have a specializing on the Supply Spare part, Service and Maintenance Equipment in telecommunication sector.</p>
-                    <p>Our Vision to be a reliable partner in all areas of telecommunications. In addition to support it we also have a reliable human resources team, an  professionals engineer who can provide the best services in all area that we serve.</p>
-                    <p><a href="/about">Read more..</a></p>
+                    <h4>About Us</h4>
+                    <p>{!! substr(strip_tags($about), 0, 400) !!}
+                        <a href="/about">{{ strlen(strip_tags($about)) > 50 ? "  ...ReadMore" : "" }}</a>
+                    </p>
                 </div>
                 <div class="col-md-8 footer-nav animated fadeInUp">
                     <h3>Latest News</h3>

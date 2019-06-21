@@ -15,7 +15,7 @@
     <div class="row" style="margin-top: 64px;">
         <div class="col-md-7 text-right">
             
-            <p>{!! $pages !!}</p>
+            <p>{!! $about !!}</p>
             
             <div class="row" style="margin-top: 64px;">
                  <!-- Tabs on Plain Card -->
@@ -40,10 +40,10 @@
                         <div class="card-body ">
                             <div class="tab-content text-center">
                                 <div class="tab-pane active" id="vision">
-                                    <p style="font-style: italic; font-size: 20px">Being a large company that can be reliable in the development of national telecommunications</p>
+                                    <p style="font-style: italic; font-size: 20px">{!! $vision !!}</p>
                                 </div>
                                 <div class="tab-pane" id="mission">
-                                    <p style="font-style: italic; font-size: 20px">Provision of goods and services in the telecommunications sector in order to satisfy customer needs</p>
+                                    <p style="font-style: italic; font-size: 20px">{!! $mission !!}</p>
                                 </div>
                                 <div class="tab-pane" id="structure">
                                     <center>

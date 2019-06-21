@@ -47,6 +47,9 @@
     <div class="row">
         <div class="col-md-4 icon-about">
             <i class="fa fa-trophy"></i>
+            {{-- <span class="icon voyager-helm"></span> --}}
+            {{-- <i class="{{ Voyager::compass ('voyager-helm')}}"></i> --}}
+            <div class="icon voyager-bread"></div>
             <h4>Competitive</h4>
             <p>Being able to competitive in regional  or national scale</p>
         </div>
