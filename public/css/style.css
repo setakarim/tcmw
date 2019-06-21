@@ -143,8 +143,8 @@
 .hrLeft {
     height: 3px;
     background-color: #16a085;
-    width: 250px;
-    margin-top: 16px;
+    width: 100%;
+    margin-bottom: 15px;
 
 }
 
@@ -360,7 +360,7 @@ div.card .card-header-color {
 }
 
 .news {
-    margin-bottom: 36px;
+    margin-bottom: 10px;
 }
 
 .news a {
@@ -373,11 +373,11 @@ div.card .card-header-color {
     object-fit: cover;
 }
 
-.news h4 {
+.news h5 {
     color: #222f3e;
 }
 
-.news h4:hover {
+.news h5:hover {
     color: #16a085;
 }
 
