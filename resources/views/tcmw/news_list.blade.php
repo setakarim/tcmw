@@ -3,35 +3,6 @@
 @section('content')
 
 <header class="masthead" style="background-image:url({{asset('img/slider2.png')}});"> </header>
-{{-- <header>
-		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-			<ol class="carousel-indicators">
-				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-			</ol>
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="{{ asset('img/slider1.png') }}" class="d-block w-100">
-				</div>
-				<div class="carousel-item">
-					<img src="{{ asset('img/slider2.png') }}" class="d-block w-100">
-				</div>
-				<div class="carousel-item">
-					<img src="{{ asset('img/slider3.png') }}" class="d-block w-100">
-				</div>
-			</div>
-	
-			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-		</div>
-	</header> --}}
 
 <div class="container">
 	<br><br>
@@ -51,7 +22,13 @@
 						<div class="card-body">
 							<h5 class="card-title">{{ $post->title }}</h5>
 							<p class="card-text">{{ str_limit(strip_tags($post->body)) }} <span> <a href="/news/{{ $post->slug }}"> Read More</a></span></p>
-							<p><span style="text-style: bold;">{{ $post->author_id }}</span> {{ $post->created_at->format('m/d/Y') }}</p>
+							<p>
+								<span style="text-style: bold;">
+									@isset($post->authorId->name)
+									{{ $post->authorId->name }}
+									@endisset
+								</span>
+								 {{ $post->created_at->format('d M Y') }}</p>
 						</div>
 					</div>
 				</div>
