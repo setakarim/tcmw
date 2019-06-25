@@ -12,6 +12,7 @@ use App\Contact;
 use App\Inbox;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Partner;
 
 class HomeController extends Controller
 {
@@ -21,7 +22,8 @@ class HomeController extends Controller
         $posts = Post::all();
         $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
         $scopes = Corporate::all();
-        return view('tcmw/home', ['nav' => 'home'], compact('posts', 'about', 'scopes'));
+        $partners = Partner::all();
+        return view('tcmw/home', ['nav' => 'home'], compact('posts', 'about', 'scopes', 'partners'));
     }
 
     public function services()

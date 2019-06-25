@@ -491,6 +491,10 @@ div.card .card-header-color {
     margin-top: 64px;
 }
 
+.image-partner {
+    margin-top: 64px;
+}
+
 @media only screen and (max-width: 600px) {
     .carousel-item {
         height: 30vh;
@@ -630,5 +634,9 @@ div.card .card-header-color {
 
     .news-info {
         display: none
+    }
+
+    .image-partner {
+        margin: 12px;
     }
 }

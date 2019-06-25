@@ -71,5 +71,25 @@
         </div>
     </div>
 </div>
+
+<div class="container container-padding">
+    <div class="icon-partner">
+        <div class="row align-items-center ">
+            <div class="col-12 text-center">
+                <h1 class="font-weight-bold contentTitle">Our Partner</h1>
+            </div>
+            <div class="hr"></div>
+        </div>
+    </div>
+    <div class="row image-partner">
+        @foreach ($partners as $partner)
+            <div class="ml-auto mr-auto">    
+                <a href="{{ $partner->link }}" target="_blank">
+                    <img src="{{ Voyager::image( $partner->image ) }}" height="50" alt="{{ $partner->name }}" style="margin: 24px;">
+                </a>
+            </div>
+        @endforeach
+    </div>
+</div>
     
 @endsection
