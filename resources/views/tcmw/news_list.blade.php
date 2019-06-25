@@ -36,42 +36,42 @@
 			</div>
 		</div>
 		
-		<div class="col-md-4 news">
-		<div style="background-color:#F8F8F8; padding: 14px;">
-			<div style="background-color:#16a085; width: 150px; height:30px; margin-left: -14px;">
-				<p style="text-align:center; font-size: 18px; color:#ffffff; ">News Category</p>
-			</div>
-			<div class="hrLeft" style="margin-left: -14px;"></div>
-			<ul style="margin-left:-10px; margin-bottom:60px; ">
-			@foreach($categories->reverse() as $category)
-				<li><a href="/news/category/{{ $category->id }}">{{ $category->name }}</a></li>
-			@endforeach
-			</ul>
-			<div style="background-color:#16a085; width: 150px; height:30px; margin-left: -14px;">
-				<p style="text-align:center; font-size: 18px; color:#ffffff; ">Latest News</p>
-			</div>
-			<div class="hrLeft" style="margin-left: -14px;"></div>
-			<div class="row">
-			@foreach($posts->reverse() as $post)
-				<div class="col-md-12 news" >
-					<div class="row">
-						<div class="col-md-4">
-							<img src="{{ Voyager::image( $post->image ) }}">
-						</div>
-						<div class="col-md-8">
-							<a href="/news/{{ $post->slug }}">
-								<h5>{{ $post->title }}</h5>
-								<p>{{ str_limit(strip_tags($post->body)) }}</p>
-							</a>
+		<div class="col-md-4 news-info">
+			<div style="background-color:#F8F8F8; padding: 14px;">
+				<div style="background-color:#16a085; width: 150px; height:30px; margin-left: -14px;">
+					<p style="text-align:center; font-size: 18px; color:#ffffff; ">News Category</p>
+				</div>
+				<div class="hrLeft" style="margin-left: -14px;"></div>
+				<ul style="margin-left:-10px; margin-bottom:60px; ">
+				@foreach($categories->reverse() as $category)
+					<li><a href="/news/category/{{ $category->id }}">{{ $category->name }}</a></li>
+				@endforeach
+				</ul>
+				<div style="background-color:#16a085; width: 150px; height:30px; margin-left: -14px;">
+					<p style="text-align:center; font-size: 18px; color:#ffffff; ">Latest News</p>
+				</div>
+				<div class="hrLeft" style="margin-left: -14px;"></div>
+				<div class="row">
+				@foreach($posts->reverse() as $post)
+					<div class="col-md-12 news" >
+						<div class="row">
+							<div class="col-md-4">
+								<img src="{{ Voyager::image( $post->image ) }}">
+							</div>
+							<div class="col-md-8">
+								<a href="/news/{{ $post->slug }}">
+									<h5>{{ $post->title }}</h5>
+									<p>{{ str_limit(strip_tags($post->body)) }}</p>
+								</a>
+							</div>
 						</div>
 					</div>
-				</div>
-				@if ($loop->iteration == 3)
-					@break
-				@endif
-			@endforeach
-			</div>	
-		</div>
+					@if ($loop->iteration == 3)
+						@break
+					@endif
+				@endforeach
+				</div>	
+			</div>
 		</div>
 	</div>
 </div>

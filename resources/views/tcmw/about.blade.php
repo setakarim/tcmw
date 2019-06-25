@@ -12,18 +12,17 @@
         <div class="hr"></div>
     </div>
 
-    <div class="row" style="margin-top: 64px;">
+    <div class="row about">
         <div class="col-md-7">
             <p>{!! $about !!}</p>
-            </div>
-        
+        </div>
         <div class="col-md-1"></div>
 
         <div class="col-md-4">
-            <img src="{{asset('img/slider1.png')}}" style="object-fit: cover;" height="300px" width="100%">
-            <div class="row" style="margin-top: 64px;">
+            <img src="{{asset('img/slider1.png')}}" style="object-fit: cover;" height="300px" width="100%" class="img-about">
+            <div class="row card-vision-mission">
             <!-- Tabs on Plain Card -->
-            <div class="card card-nav-tabs card-plain">
+                <div class="card card-nav-tabs card-plain">
                    <div class="card-header card-header-color">
                        <div class="nav-tabs-navigation">
                            <div class="nav-tabs-wrapper">
@@ -62,9 +61,8 @@
                 <h1 class="contentTitle">Structure</h1>
             </div>
             <div class="hr"></div>
-            
         </div>
-        <div class="row" style="margin-top: 24px;">
+        <div class="row about-structure">
             <center>
                 <img src="{{ Voyager::image( $structure->image ) }}" style="object-fit: contain;" width="70%">
             </center>
@@ -78,12 +76,10 @@
             <h1 class="contentTitle">Project Reference List</h1>
         </div>
         <div class="hr"></div>
-        
     </div>
-
-    <div class="row" style="margin-top: 64px;">
+    <div class="row about-project">
         <table class="table table-striped">
-            <thead style="color:#ffffff;background-color:#16a085;">
+            <thead style="color:#ffffff; background-color:#16a085;">
               <tr>
                 <th scope="col">Customer</th>
                 <th scope="col">Project Name</th>

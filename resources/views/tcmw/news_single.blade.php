@@ -13,7 +13,7 @@
 
 		<div class="col-md-1"></div>
 		
-		<div class="col-md-4 news" style="background-color:#F8F8F8">
+		<div class="col-md-4 news-info" style="background-color:#F8F8F8">
 			<div style="background-color:#16a085; width: 150px; height:30px; margin-left: -14px;">
 				<p style="text-align:center; font-size: 18px; color:#ffffff; ">News Category</p>
 			</div>

@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row icon-about">
         @foreach ($scopes as $scope)
             <div class="col-md-4 icon-about">
                 <i class="fa {{ $scope->icon }}"></i>
@@ -63,7 +63,7 @@
                 <h1 class="font-weight-bold" style="color: #fff">What We Do</h1>
                 <p style="color: #fff">Our scope of work include</p>
             </div>
-            <div class="col-md-2 ml-auto" style="margin: auto;">
+            <div class="col-md-2" style="margin: auto;">
                 <a href="/services">
                     <button type="button" class="btn btn-outline-light" style="padding: 12px 24px;">Scope of Work</button>
                 </a>

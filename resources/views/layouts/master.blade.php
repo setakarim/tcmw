@@ -105,7 +105,7 @@
                     </p>
                 </div>
                 <div class="col-md-8 footer-nav animated fadeInUp">
-                    <h3>Latest News</h3>
+                    <h4>Latest News</h4>
                     <div class="pages">
                         <div class="row">
                         @foreach($posts->reverse() as $post)

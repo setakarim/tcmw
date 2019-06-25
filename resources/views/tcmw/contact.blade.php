@@ -12,14 +12,15 @@
         <div class="hr"></div>
     </div>
 
-    <div class="row" style="margin-top: 64px;">
-        <div class="col-md-6" style="padding-right: 50px;">
-            <h5>PT. TUNAS CAHAYA MANDIRI WIDYATAMA</h5><br>
+    <div class="row contact">
+        <div class="col-md-6" class="contact-info">
+            <h5>PT. Tunas Cahaya Mandiri Widyatama</h5><br>
             @foreach ($contacts as $contact)
                 <p><i class="fa {{ $contact->icon }}" aria-hidden="true"></i> {{ $contact->description }}</p>
             @endforeach
         </div>
-        <div class="col-md-6">
+        <div class="col-md-1"></div>
+        <div class="col-md-5 contact-message">
             <form method="POST" action="/contact/sent" class="forms">
                 {{ csrf_field() }}
                 <div class="row">

@@ -17,7 +17,7 @@
         <div class="col-md-8">
                 <div class="content-section">
                     @foreach ($services as $service)
-                    <div id="{{ $service->id }}" style="padding: 90px;">
+                        <div id="{{ $service->id }}" class="content-section-item">
                             <h5 style="text-align: center; margin-top: 8px;">{{ $service->title }}</h5>
                             @foreach (json_decode($service->image) as $item)
                                 <img src="{{ Voyager::image( $item ) }}" class="d-block w-100" >
