@@ -5,6 +5,7 @@ namespace App\Http\Controllers\TCMW;
 use App\Http\Controllers\Controller;
 use TCG\Voyager\Models\Page;
 use TCG\Voyager\Models\Post;
+use App\Project;
 
 class HomeController extends Controller
 {
@@ -29,7 +30,9 @@ class HomeController extends Controller
         $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
         $vision = Page::where('slug', '=', 'vision')->firstOrFail()->body;
         $mission = Page::where('slug', '=', 'mission')->firstOrFail()->body;
-        return view('tcmw/about', ['nav' => 'about'], compact('posts', 'about', 'vision', 'mission'));
+        $structure = Page::where('slug', '=', 'structure')->firstOrFail();
+        $projects = Project::all();
+        return view('tcmw/about', ['nav' => 'about'], compact('posts', 'about', 'vision', 'mission', 'structure', 'projects'));
     }
 
     public function aboutStructure()

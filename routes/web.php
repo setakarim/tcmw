@@ -29,7 +29,9 @@ Route::get('/login', 'TCMW\HomeController@login');
 
 Route::get('/news', 'TCMW\NewsController@news');
 
-Route::get('news/{slug}', 'TCMW\NewsController@show');
+Route::get('/news/{slug}', 'TCMW\NewsController@show');
+
+Route::get('/news/category/{slug}', 'TCMW\NewsController@category');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

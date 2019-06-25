@@ -360,6 +360,12 @@ div.card .card-header-color {
 }
 
 .news a {
+    color: #222f3e;
+    text-decoration: none;
+}
+
+.news a:hover {
+    color: #16a085;
     text-decoration: none;
 }
 

@@ -12,11 +12,9 @@ class NewsController extends Controller
     //
     public function news() {
         $posts = Post::all();
-        // $author = Post::where('slug', '=', 'about')->firstOrFail()->author_id->hasOne(User, 'id')->name;
         $author = Post::with('authorId')->get();
         $categories = Category::all();
         $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
-
         return view('tcmw/news_list', ['nav' => 'news'], compact('posts', 'about', 'categories', 'author'));
     }
 
@@ -26,5 +24,14 @@ class NewsController extends Controller
         $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
         $categories = Category::all();
 	    return view('tcmw/news_single', ['nav' => 'news'], compact('posts', 'post', 'about', 'categories'));
+    }
+
+    public function category($slug) {
+        $posts = Post::where('category_id', '=', $slug)->get();
+        $author = Post::with('authorId')->get();
+        $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
+        $categories = Category::all();
+        $category_name = Category::where('id', '=', $slug)->firstOrFail()->name;
+	    return view('tcmw/category_list', ['nav' => 'news'], compact('posts', 'about', 'categories', 'author', 'category_name'));
     }
 }
