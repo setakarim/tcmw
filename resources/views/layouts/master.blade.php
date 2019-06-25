@@ -127,7 +127,6 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
         <nav class="navbar navbar-expand-lg navbar-footer navbar-light" style="background-color: #222f3e;">

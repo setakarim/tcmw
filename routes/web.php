@@ -23,7 +23,7 @@ Route::get('/about', 'TCMW\HomeController@about');
 
 Route::get('/contact', 'TCMW\HomeController@contact');
 
-Route::post('/contact', 'TCMW\HomeController@saveMessage')->name('contact.save');
+Route::post('/contact/sent', 'TCMW\HomeController@sentMessage');
 
 Route::get('/login', 'TCMW\HomeController@login');
 

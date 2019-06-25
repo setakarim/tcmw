@@ -20,42 +20,29 @@
             @endforeach
         </div>
         <div class="col-md-6">
-            @if (count($errors) > 0)
-                <div class="alert-danger">
-                    <ul>
-                        @foreach ($errors->all as $error)
-                            <li>{{$error}}</li>
-                        @endforeach
-                    </ul>
+            <form method="POST" action="/contact/sent" class="forms">
+                {{ csrf_field() }}
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="inputName">Name</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Name" name="name">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="inputEmail1">Email</label>
+                        <input type="mail" class="form-control" id="inputMail" aria-describedby="emailHelp" placeholder="Email" name="mail">
+                    </div>
                 </div>
-            @endif
-            @if (\Session::has('success'))
-                <div class="alert alert-success">
-                    <p>{{\Session::get('success')}}</p>
+                <div class="form-group">
+                    <label for="inputSubject">Subject</label>
+                    <input type="text" class="form-control" id="inputSubject" placeholder="Subject" name="subject">
                 </div>
-            @endif
-                <form action="" class="forms">
-                    <div class="row">
-                        <div class="col-md-6 form-group">
-                            <label for="inputName">Name</label>
-                            <input type="text" class="form-control" id="inputName" placeholder="Name">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label for="inputEmail1">Email</label>
-                            <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="Email">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputSubject">Subject</label>
-                        <input type="text" class="form-control" id="inputEmail1" placeholder="Subject">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputMessage">Message</label>
-                        <textarea class="form-control" rows="5" id="message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-success">Submit</button>
-                </form>
-            </div>
+                <div class="form-group">
+                    <label for="inputMessage">Message</label>
+                    <textarea class="form-control" rows="5" id="message" name="message"></textarea>
+                </div>
+                <button type="submit" name="submit" class="btn btn-success" value="Add">Submit</button>
+            </form>
+        </div>
     </div>
 </div>
 @endsection

@@ -9,6 +9,9 @@ use App\Project;
 use App\Corporate;
 use App\Services;
 use App\Contact;
+use App\Inbox;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -48,22 +51,23 @@ class HomeController extends Controller
         return view('tcmw/contact', ['nav' => 'contact'], compact('posts', 'about', 'contacts'));
     }
 
-    // public function saveMessage(Request $request){
-    //     //validasi data
-    //     $this->validate($request, [
-    //         'name'	=> 'required',
-    //         'email'	=> 'required',
-    //         'subject'	=> 'required'
-    //     ]);
+    public function sentMessage(Request $request){
 
-    //     //menyimpan ke table posts kemudian redirect page 
-    //     $post = Post::create([
-    //         'name' => $request->name, 
-    //         'email'	=> $request->email,
-    //         'subject' => $request->email
-    //         ]);
-            
-    //     return redirect(route('tcmw.contact'));
-    // }
+        $name = $request->input('name');
+        $mail = $request->input('mail');
+        $subject = $request->input('subject');
+        $message = $request->input('message');
+
+        $data = array(
+            'name' => $name,
+            'mail' => $mail,
+            'subject' => $subject,
+            'message' => $message
+        );
+
+        DB::table('inboxes')->insert($data);
+
+        return redirect('/contact');
+    }
 
 }
