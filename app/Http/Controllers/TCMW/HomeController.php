@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use TCG\Voyager\Models\Page;
 use TCG\Voyager\Models\Post;
 use App\Project;
+use App\Services;
 
 class HomeController extends Controller
 {
@@ -14,7 +15,8 @@ class HomeController extends Controller
     {
         $posts = Post::all();
         $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
-        return view('tcmw/home', ['nav' => 'home'], compact('posts', 'about'));
+        $services = Services::all();
+        return view('tcmw/home', ['nav' => 'home'], compact('posts', 'about', 'services'));
     }
 
     public function services()

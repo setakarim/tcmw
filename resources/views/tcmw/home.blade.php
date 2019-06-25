@@ -45,39 +45,13 @@
     </div>
 
     <div class="row">
-        <div class="col-md-4 icon-about">
-            <i class="fa fa-trophy"></i>
-            {{-- <span class="icon voyager-helm"></span> --}}
-            {{-- <i class="{{ Voyager::compass ('voyager-helm')}}"></i> --}}
-            <div class="icon voyager-bread"></div>
-            <h4>Competitive</h4>
-            <p>Being able to competitive in regional  or national scale</p>
-        </div>
-        <div class="col-md-4 icon-about">
-            <i class="fa fa-leaf"></i>
-            <h4>Clean</h4>
-            <p>Managed as professional to avoid the clash of benefit, there is no tolerance of bribe, respect the trust and integrity. Guidance to the base of good corporate governance</p>
-        </div>
-        <div class="col-md-4 icon-about">
-            <i class="fa fa-location-arrow"></i>
-            <h4>Confident</h4>
-            <p>Role in economy development and build the pride of nation</p>
-        </div>
-        <div class="col-md-4 icon-about">
-            <i class="fa fa-briefcase"></i>
-            <h4>Commercial</h4>
-            <p>Created the value added with maximal orientation, to take a decision based on the healthy business principal</p>
-        </div>
-        <div class="col-md-4 icon-about">
-            <i class="fa fa-user"></i>
-            <h4>Customer Focus</h4>
-            <p>Oriented in customer interest and commit to give the best services for the customer</p>
-        </div>
-        <div class="col-md-4 icon-about">
-            <i class="fa fa-check"></i>
-            <h4>Capable</h4>
-            <p>Managed by the professional leader and employee that have talent and technic mastery</p>
-        </div>
+        @foreach ($services as $service)
+            <div class="col-md-4 icon-about">
+                <i class="fa {{ $service->icon }}"></i>
+                <h4>{{ $service->name }}</h4>
+                <p>{{ $service->description }}</p>
+            </div>
+        @endforeach
     </div>
 </div>
 
