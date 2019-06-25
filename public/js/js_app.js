@@ -1,9 +1,9 @@
 var header = document.getElementById("sidebar-services");
-var btns = header.getElementsByClassName("content-side");
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
+var contents = header.getElementsByClassName("content-side");
+for (var i = 0; i < contents.length; i++) {
+    contents[i].addEventListener("click", function () {
         var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
+        current[1].className = current[1].className.replace(" active", "");
         this.className += " active";
     });
 }

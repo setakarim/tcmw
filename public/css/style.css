@@ -1,6 +1,6 @@
 .carousel-item {
-    height: 100vh;
-    min-height: 350px;
+    height: 60vh;
+    min-height: 120px;
     background: no-repeat center center fixed;
     -webkit-background-size: contain;
     -moz-background-size: contain;
@@ -389,7 +389,7 @@ div.card .card-header-color {
 }
 
 .content-section {
-    min-height: 2000px;
+    min-height: 200px;
 }
 
 .sidebar-section {
@@ -414,8 +414,9 @@ div.card .card-header-color {
 .make-me-sticky {
     position: -webkit-sticky;
     position: sticky;
+    /* margin-top: 84px; */
     top: 0;
-    padding: 0 15px;
+    padding: 84px 15px;
 }
 
 .make-me-sticky h5 {

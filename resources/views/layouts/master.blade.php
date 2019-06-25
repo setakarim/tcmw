@@ -21,7 +21,7 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom navbar-light @if ( $nav != 'services' ) fixed-top @endif shadow" >
+    <nav class="navbar navbar-expand-lg navbar-custom navbar-light sticky-top shadow">
         <div class="container" style="padding: 8px;">
             <a class="navbar-brand" href="/">
                 <img src="{{asset('img/logo.png')}}" class="navbar-brand-img">

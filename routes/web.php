@@ -20,8 +20,6 @@ Route::get('/', 'TCMW\HomeController@home');
 Route::get('/services', 'TCMW\HomeController@services');
 
 Route::get('/about', 'TCMW\HomeController@about');
-Route::get('/about_structure', 'TCMW\HomeController@aboutStructure');
-Route::get('/about_rpl', 'TCMW\HomeController@aboutPRL');
 
 Route::get('/contact', 'TCMW\HomeController@contact');
 
