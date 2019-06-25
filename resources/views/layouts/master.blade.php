@@ -8,7 +8,7 @@
 
     <title>Tunas Cahaya Mandiri Widyatama</title>
     
-    <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
+    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -61,16 +61,6 @@
                         <a class="nav-link" href="/about">About
                             @if ( $nav == 'about' ) <span class="sr-only">(current)</span> @endif
                         </a>
-                            {{-- <a href="#" class="nav-link" data-toggle="dropdown">About <i class="fa fa-caret-down"></i></a> --}}
-                            {{-- <div class="dropdown-content">
-                                <a href="/about">About Us</a>
-                                <a href="/about_structure">Structure Organization</a>
-                                <a href="/about_rpl">Project Reference List</a>
-                            </div> --}}
-
-                                {{-- <a class="nav-link" href="/about">About
-                                    @if ( $nav == 'about' ) <span class="sr-only">(current)</span> @endif
-                                </a> --}}
                         @if ( $nav == 'about' )
                         </div>
                         @endif

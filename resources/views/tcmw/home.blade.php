@@ -45,11 +45,11 @@
     </div>
 
     <div class="row">
-        @foreach ($services as $service)
+        @foreach ($scopes as $scope)
             <div class="col-md-4 icon-about">
-                <i class="fa {{ $service->icon }}"></i>
-                <h4>{{ $service->name }}</h4>
-                <p>{{ $service->description }}</p>
+                <i class="fa {{ $scope->icon }}"></i>
+                <h4>{{ $scope->name }}</h4>
+                <p>{{ $scope->description }}</p>
             </div>
         @endforeach
     </div>
