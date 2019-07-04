@@ -15,7 +15,7 @@
                     <li><a class="@if ( $nav == 'services' ) active @endif" href="/services">Services <i class="icon-caret-down"></i></a>
                         <ul class="submenu">
                             @foreach ($services as $service)
-                                <li><a class="" href="">{{ $service->title }}</a></li>
+                                <li><a href="/services/{{$service->id}}">{{ $service->title }}</a></li>
                             @endforeach
                         </ul>
                     </li>

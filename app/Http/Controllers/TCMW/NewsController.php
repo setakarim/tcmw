@@ -6,11 +6,10 @@ use App\Http\Controllers\Controller;
 use TCG\Voyager\Models\Post;
 use TCG\Voyager\Models\Page;
 use TCG\Voyager\Models\Category;
-use TCG\Voyager\Models\Services;
+use App\Services;
 
 class NewsController extends Controller
 {
-    //
     public function news() {
         $posts = Post::all();
         $author = Post::with('authorId')->get();

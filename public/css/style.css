@@ -463,7 +463,7 @@ footer .row
 /* Blog
 /* =============================================================== */
 article{	border-bottom:1px solid #eee;	padding-bottom:50px;	margin-bottom:50px;}
-#blog-1 .entry-slider{margin: 0 auto; width:80%;}
+#blog-1 .entry-slider{margin: 0 auto; width:80%; background-color: #fff}
 #blog-1 .entry-body, .entry-meta{margin-top:20px;}
 #blog-1 .entry-body{color:#888; float:left; width:100%}
 #blog-1 .entry-meta{font-size:11px;	color:#888; float:right; width:20%;}
@@ -484,7 +484,7 @@ article{	border-bottom:1px solid #eee;	padding-bottom:50px;	margin-bottom:50px;}
 #blog-2 .entry-slider, #blog-2 .entry-image, #blog-2 .entry-video{float:left; margin-right:15px;}
 
 .entry-slider{position:relative; }
-.entry-slider img{width:100%;}
+.entry-slider img{height: 50vh; background: #fff; object-fit: contain}
 .entry-slider .flex-direction-nav a {width: 30px; height: 60px; margin-top:-30px; display: block; opacity:0;	filter:alpha(opacity=0);/* IE 8*/ font-size:22px; text-align:center; color:#fff; line-height:55px; top:50%;}
 .entry-slider .flex-direction-nav a i{margin-right:0;}
 .entry-slider .flex-direction-nav .flex-next {background-color:#333;background-color:rgba(0, 0, 0, .6); right:15px;}
@@ -805,7 +805,7 @@ label, input, button, select, textarea, .btn
 	height:auto;
 	margin-right:20px;
 	position:relative;
-	 width:263px;
+	width:263px;
 }
 .carousel .flex-viewport li img {width:100%;}
 .project-item

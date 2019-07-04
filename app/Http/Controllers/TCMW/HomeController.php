@@ -9,14 +9,12 @@ use App\Project;
 use App\Corporate;
 use App\Services;
 use App\Contact;
-use App\Inbox;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Partner;
 
 class HomeController extends Controller
 {
-    //
     public function home()
     {
         $posts = Post::all();
@@ -25,14 +23,6 @@ class HomeController extends Controller
         $partners = Partner::all();
         $services = Services::all();
         return view('tcmw/home', ['nav' => 'home'], compact('posts', 'about', 'scopes', 'partners', 'services'));
-    }
-
-    public function services()
-    {
-        $posts = Post::all();
-        $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
-        $services = Services::all();
-        return view('tcmw/services', ['nav' => 'services'], compact('posts', 'about', 'services'));
     }
 
     public function about()

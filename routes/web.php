@@ -17,7 +17,9 @@
 
 Route::get('/', 'TCMW\HomeController@home');
 
-Route::get('/services', 'TCMW\HomeController@services');
+Route::get('/services', 'TCMW\ServicesController@services');
+
+Route::get('/services/{slug}', 'TCMW\ServicesController@show');
 
 Route::get('/about', 'TCMW\HomeController@about');
 

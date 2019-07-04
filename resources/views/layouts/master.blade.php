@@ -15,7 +15,8 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/layout/boxed1.css') }}" id="layout">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/skin/green.css') }}" id="skin" />
 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
         <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
 
@@ -32,7 +33,6 @@
 
         </div>
 
-        <!--Move To Top-->
         <div id="movetotop"> <a class="icon-angle-up"></a> </div>
         <script type="text/javascript">
             if (self == top) {
