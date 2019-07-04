@@ -44,7 +44,8 @@ class HomeController extends Controller
         $structure = Page::where('slug', '=', 'structure')->firstOrFail();
         $projects = Project::all();
         $services = Services::all();
-        return view('tcmw/about', ['nav' => 'about'], compact('posts', 'about', 'vision', 'mission', 'structure', 'projects', 'services'));
+        $partners = Partner::all();
+        return view('tcmw/about', ['nav' => 'about'], compact('posts', 'about', 'vision', 'mission', 'structure', 'projects', 'services', 'partners'));
     }
 
     public function contact()

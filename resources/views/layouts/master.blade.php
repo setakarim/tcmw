@@ -14,7 +14,7 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" media="screen" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/layout/boxed1.css') }}" id="layout">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/skin/green.css') }}" id="skin" />
-        
+
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
         <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
@@ -67,7 +67,7 @@
 
     </body>
     <script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/jquery.prettyPhoto.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/jquery.nivo.slider.pack.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/jflickrfeed.js')}}"></script>
