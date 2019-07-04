@@ -4,8 +4,8 @@
             </div>
             <nav id="navigation">
                 <div class="header-info clearfix">
-                    <span><i class="icon-home"></i> Address: Klampis Madya Raya 1</span>
-                    <span><i class="icon-mail-forward"></i>info@karuniaindah.net</span>
+                    <span><i class="icon-home"></i> Address: {{$address}}</span>
+                    <span><i class="icon-mail-forward"></i> {{$email}}</span>
                 </div>
     
                 <ul class="menu-lamp hidden-phone clearfix" id="menu-lamp">

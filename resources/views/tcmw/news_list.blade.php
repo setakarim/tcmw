@@ -4,7 +4,7 @@
 
 <section id="page-header" class="page-section">
     <div class="container effect-loaded clearfix">
-        <h1>Services</h1>
+        <h1>News</h1>
         <ul class="breadcrumb">
             <li><a href="/">Home</a></li>
             <li class="active">News</li>

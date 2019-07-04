@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use TCG\Voyager\Models\Post;
 use TCG\Voyager\Models\Page;
 use App\Services;
+use App\Contact;
 
 
 class ServicesController extends Controller
@@ -14,7 +15,9 @@ class ServicesController extends Controller
         $posts = Post::all();
         $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
         $services = Services::all();
-        return view('tcmw/services_list', ['nav' => 'services'], compact('posts', 'about', 'services'));
+        $address = Contact::where('name', '=', 'Address')->firstOrFail()->description;
+        $email = Contact::where('name', '=', 'Email')->firstOrFail()->description;
+        return view('tcmw/services_list', ['nav' => 'services'], compact('posts', 'about', 'services', 'address', 'email'));
     }
 
     public function show($slug) {
@@ -22,6 +25,8 @@ class ServicesController extends Controller
         $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
         $services = Services::all();
         $service = Services::where('id', '=', $slug)->firstOrFail();
-        return view('tcmw/services_single', ['nav' => 'services'], compact('posts', 'about', 'services', 'service'));
+        $address = Contact::where('name', '=', 'Address')->firstOrFail()->description;
+        $email = Contact::where('name', '=', 'Email')->firstOrFail()->description;
+        return view('tcmw/services_single', ['nav' => 'services'], compact('posts', 'about', 'services', 'service', 'address', 'email'));
     }
 }

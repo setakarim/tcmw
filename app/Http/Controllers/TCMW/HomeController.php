@@ -22,7 +22,9 @@ class HomeController extends Controller
         $scopes = Corporate::all();
         $partners = Partner::all();
         $services = Services::all();
-        return view('tcmw/home', ['nav' => 'home'], compact('posts', 'about', 'scopes', 'partners', 'services'));
+        $address = Contact::where('name', '=', 'Address')->firstOrFail()->description;
+        $email = Contact::where('name', '=', 'Email')->firstOrFail()->description;
+        return view('tcmw/home', ['nav' => 'home'], compact('posts', 'about', 'scopes', 'partners', 'services', 'address', 'email'));
     }
 
     public function about()
@@ -35,7 +37,9 @@ class HomeController extends Controller
         $projects = Project::all();
         $services = Services::all();
         $partners = Partner::all();
-        return view('tcmw/about', ['nav' => 'about'], compact('posts', 'about', 'vision', 'mission', 'structure', 'projects', 'services', 'partners'));
+        $address = Contact::where('name', '=', 'Address')->firstOrFail()->description;
+        $email = Contact::where('name', '=', 'Email')->firstOrFail()->description;
+        return view('tcmw/about', ['nav' => 'about'], compact('posts', 'about', 'vision', 'mission', 'structure', 'projects', 'services', 'partners', 'address', 'email'));
     }
 
     public function contact()
@@ -44,7 +48,10 @@ class HomeController extends Controller
         $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
         $contacts = Contact::all();
         $services = Services::all();
-        return view('tcmw/contact', ['nav' => 'contact'], compact('posts', 'about', 'contacts', 'services'));
+        $maps = Contact::where('icon', '=', 'maps')->firstOrFail()->description;
+        $address = Contact::where('name', '=', 'Address')->firstOrFail()->description;
+        $email = Contact::where('name', '=', 'Email')->firstOrFail()->description;
+        return view('tcmw/contact', ['nav' => 'contact'], compact('posts', 'about', 'contacts', 'services', 'maps', 'address', 'email'));
     }
 
     public function sentMessage(Request $request){
