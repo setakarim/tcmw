@@ -39,7 +39,7 @@
                         <div class="col-lg-12">
                             <div class="widget">
                                 <h4 class="widget-title">Our Scope Of Work Include :</h4>
-                                <ul class="square-list">
+                                <ul class="list">
                                     @foreach ($services as $item)
                                     <li>
                                         <a href="/services/{{$item->id}}">

@@ -464,9 +464,9 @@ footer .row
 /* =============================================================== */
 article{	border-bottom:1px solid #eee;	padding-bottom:50px;	margin-bottom:50px;}
 #blog-1 .entry-slider{margin: 0 auto; width:80%; background-color: #fff}
-#blog-1 .entry-body, .entry-meta{margin-top:20px;}
+#blog-1 .entry-body, .entry-meta{margin-top:20px; min-height: 180px;}
 #blog-1 .entry-body{color:#888; float:left; width:100%}
-#blog-1 .entry-meta{font-size:11px;	color:#888; float:right; width:20%;}
+#blog-1 .entry-meta{font-size:11px;	color:#888; }
 #blog-1 .entry-meta .post-type{width:35px; height:35px; font-size:18px; line-height:35px; background:#39c381; color:#fff; display:block; text-align:center; margin-bottom:10px;}
 #blog-1 .entry-meta a {color:#888; font-style:italic;}
 #blog-1 .entry-meta a:hover{}

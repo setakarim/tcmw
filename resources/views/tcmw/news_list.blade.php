@@ -2,78 +2,61 @@
 
 @section('content')
 
-<header class="masthead" style="background-image:url({{asset('img/slider2.png')}});"> </header>
+<section id="page-header" class="page-section">
+    <div class="container effect-loaded clearfix">
+        <h1>Services</h1>
+        <ul class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li class="active">News</li>
+        </ul>
+    </div>
+</section>
 
-<div class="container">
-	<br><br>
-	<div class="row">
-		<div class="col-md-8 news" >
-			<div class="row ">
-				<div class="col-3 ">
-					<h2 class="contentTitle">News</h2>
-					<div class="hrLeft"></div>
-				</div>
-			</div>
-			<div class="row">
-				@foreach($posts->reverse() as $post)
-				<div class="col-md-6 news">
-					<div class="card" style="width: 100%">
-						<img class="card-img-top" src="{{ Voyager::image( $post->image ) }}" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title"><a href="/news/{{ $post->slug }}">{{ $post->title }}</a></h5>
-							<p class="card-text">{{ str_limit(strip_tags($post->body)) }} <span> <a href="/news/{{ $post->slug }}"> Read More</a></span></p>
-							<p>
-								<span style="text-style: bold;">
-									@isset($post->authorId->name)
-									{{ $post->authorId->name }},
-									@endisset
-								</span>
-								 {{ $post->created_at->format('d M Y') }}</p>
-						</div>
+<section id="page-content">
+    <div class="container">
+        <div class="row">
+            <div id="blog-1" class="col-lg-8">
+                <div id="blog-content" class="row">
+					@foreach($posts->reverse() as $post)
+                    <div class="col-lg-6">
+                        <article class="clearfix">
+                            <div class="effect-loaded">
+                                <img src="{{ Voyager::image( $post->image ) }}" style="height: 200px; object-fit: cover" />
+                            </div>
+                            <div class="entry-body effect-loaded">
+                                <h3 class="entry-title"><a href="/news/{{ $post->slug }}">{{ $post->title }}</a></h3>
+                                <p>{!! Str::words(strip_tags($post->body), 40) !!}</p>
+								<p>
+									<strong style="color: #39c381">
+										@isset($post->authorId->name)
+										{{ $post->authorId->name }}
+										@endisset
+									</strong> {{ $post->created_at->format('d M Y') }}
+								</p>
+                            </div>
+                        </article>
 					</div>
-				</div>
-				@endforeach
-			</div>
-		</div>
-		
-		<div class="col-md-4 news-info">
-			<div style="background-color:#F8F8F8; padding: 14px;">
-				<div style="background-color:#16a085; width: 150px; height:30px; margin-left: -14px;">
-					<p style="text-align:center; font-size: 18px; color:#ffffff; ">News Category</p>
-				</div>
-				<div class="hrLeft" style="margin-left: -14px;"></div>
-				<ul style="margin-left:-10px; margin-bottom:60px; ">
-				@foreach($categories->reverse() as $category)
-					<li><a href="/news/category/{{ $category->id }}">{{ $category->name }}</a></li>
-				@endforeach
-				</ul>
-				<div style="background-color:#16a085; width: 150px; height:30px; margin-left: -14px;">
-					<p style="text-align:center; font-size: 18px; color:#ffffff; ">Latest News</p>
-				</div>
-				<div class="hrLeft" style="margin-left: -14px;"></div>
-				<div class="row">
-				@foreach($posts->reverse() as $post)
-					<div class="col-md-12 news" >
-						<div class="row">
-							<div class="col-md-4">
-								<img src="{{ Voyager::image( $post->image ) }}">
-							</div>
-							<div class="col-md-8">
-								<a href="/news/{{ $post->slug }}">
-									<h5>{{ $post->title }}</h5>
-									<p>{{ str_limit(strip_tags($post->body)) }}</p>
-								</a>
-							</div>
+					@endforeach
+                </div>
+            </div>
+            <div id="sidebar" class="col-md-4">
+                <div class="sidebar-bg">
+                    <div class="row clearfix">
+                        <div class="col-lg-12">
+                            <div class="widget">
+                                <h4 class="widget-title">Category :</h4>
+                                <ul class="list">
+									@foreach($categories->reverse() as $category)
+									<li><a href="/news/category/{{ $category->id }}">{{ $category->name }}</a></li>
+									@endforeach
+                                </ul>
+                            </div>
 						</div>
-					</div>
-					@if ($loop->iteration == 3)
-						@break
-					@endif
-				@endforeach
-				</div>	
-			</div>
-		</div>
-	</div>
-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 @endsection

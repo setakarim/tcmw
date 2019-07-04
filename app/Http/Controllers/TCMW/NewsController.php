@@ -24,7 +24,7 @@ class NewsController extends Controller
         $post = Post::where('slug', '=', $slug)->firstOrFail();
         $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
         $categories = Category::all();
-
+        $services = Services::all();
 	    return view('tcmw/news_single', ['nav' => 'news'], compact('posts', 'post', 'about', 'categories', 'services'));
     }
 
@@ -34,6 +34,7 @@ class NewsController extends Controller
         $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
         $categories = Category::all();
         $category_name = Category::where('id', '=', $slug)->firstOrFail()->name;
-	    return view('tcmw/category_list', ['nav' => 'news'], compact('posts', 'about', 'categories', 'author', 'category_name'));
+        $services = Services::all();
+	    return view('tcmw/category_list', ['nav' => 'news'], compact('posts', 'about', 'categories', 'author', 'category_name', 'services'));
     }
 }
