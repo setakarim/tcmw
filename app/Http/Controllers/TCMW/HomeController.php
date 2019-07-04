@@ -23,7 +23,8 @@ class HomeController extends Controller
         $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
         $scopes = Corporate::all();
         $partners = Partner::all();
-        return view('tcmw/home', ['nav' => 'home'], compact('posts', 'about', 'scopes', 'partners'));
+        $services = Services::all();
+        return view('tcmw/home', ['nav' => 'home'], compact('posts', 'about', 'scopes', 'partners', 'services'));
     }
 
     public function services()
@@ -42,7 +43,8 @@ class HomeController extends Controller
         $mission = Page::where('slug', '=', 'mission')->firstOrFail()->body;
         $structure = Page::where('slug', '=', 'structure')->firstOrFail();
         $projects = Project::all();
-        return view('tcmw/about', ['nav' => 'about'], compact('posts', 'about', 'vision', 'mission', 'structure', 'projects'));
+        $services = Services::all();
+        return view('tcmw/about', ['nav' => 'about'], compact('posts', 'about', 'vision', 'mission', 'structure', 'projects', 'services'));
     }
 
     public function contact()
@@ -50,7 +52,8 @@ class HomeController extends Controller
         $posts = Post::all();
         $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
         $contacts = Contact::all();
-        return view('tcmw/contact', ['nav' => 'contact'], compact('posts', 'about', 'contacts'));
+        $services = Services::all();
+        return view('tcmw/contact', ['nav' => 'contact'], compact('posts', 'about', 'contacts', 'services'));
     }
 
     public function sentMessage(Request $request){

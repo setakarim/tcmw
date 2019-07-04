@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use TCG\Voyager\Models\Post;
 use TCG\Voyager\Models\Page;
 use TCG\Voyager\Models\Category;
+use TCG\Voyager\Models\Services;
 
 class NewsController extends Controller
 {
@@ -15,7 +16,8 @@ class NewsController extends Controller
         $author = Post::with('authorId')->get();
         $categories = Category::all();
         $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
-        return view('tcmw/news_list', ['nav' => 'news'], compact('posts', 'about', 'categories', 'author'));
+        $services = Services::all();
+        return view('tcmw/news_list', ['nav' => 'news'], compact('posts', 'about', 'categories', 'author', 'services'));
     }
 
     public function show($slug) {
@@ -23,7 +25,8 @@ class NewsController extends Controller
         $post = Post::where('slug', '=', $slug)->firstOrFail();
         $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
         $categories = Category::all();
-	    return view('tcmw/news_single', ['nav' => 'news'], compact('posts', 'post', 'about', 'categories'));
+
+	    return view('tcmw/news_single', ['nav' => 'news'], compact('posts', 'post', 'about', 'categories', 'services'));
     }
 
     public function category($slug) {

