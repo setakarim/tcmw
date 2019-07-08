@@ -279,7 +279,6 @@ header .container {
 }
 
 #page-header .container {
-    background: url(../images/page-header-bg.html) no-repeat 105% center;
     background-size: auto;
     padding-top: 25px;
     padding-bottom: 15px;
@@ -862,7 +861,8 @@ article {
 #blog-1 .entry-body {
     color: #888;
     float: left;
-    width: 100%
+    width: 100%;
+    min-height: 180px;
 }
 
 #blog-1 .entry-meta {
@@ -2164,11 +2164,11 @@ h3.bg-color {
 }
 
 .client-logo-link {
-	color: #FFFFFF80
+    color: #FFFFFF80
 }
 
 .client-logo-link:hover {
-	color: #FFFFFF
+    color: #FFFFFF
 }
 
 /* =============================================================== */
@@ -2396,7 +2396,7 @@ h3.bg-color {
     .tp-caption.bg-black {
         background: none !important;
         padding: 0 !important;
-	}
+    }
 }
 
 @media (min-width: 1200px) {
