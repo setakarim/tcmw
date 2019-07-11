@@ -5,11 +5,18 @@
 <section id="section-slider">
     <div class="slider-wrapper">
         <div id="slider" class="nivoSlider">
-            <img src="{{asset('img/slider1.png')}}" alt="" />
-            <img src="{{asset('img/slider2.png')}}" alt="" />
-            <img src="{{asset('img/slider3.png')}}" alt="" />
+            @foreach ($sliders as $slider)
+                <img src="{{ Voyager::image( $slider->image ) }}" title="#{{ $slider->id }}_slider"/>
+            @endforeach
         </div>
-    </div>
+      </div>
+      @foreach ($sliders as $slider)
+      @if ($slider->description !== '')
+        <div id="{{ $slider->id }}_slider" class="nivo-html-caption">
+            <div class="container-caption">{{ $slider->description }}</div>
+        </div>
+      @endif
+      @endforeach
 </section>
 
 <section id="page-section-2" class="page-section">

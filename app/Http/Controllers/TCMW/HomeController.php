@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\TCMW;
 
 use App\Http\Controllers\Controller;
-use TCG\Voyager\Models\Page;
 use TCG\Voyager\Models\Post;
 use App\Project;
 use App\Corporate;
@@ -12,28 +11,32 @@ use App\Contact;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Partner;
+use App\Slider;
+use App\About;
+use App\Structure;
 
 class HomeController extends Controller
 {
     public function home()
     {
         $posts = Post::all();
-        $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
+        $about = About::where('slug', '=', 'about')->firstOrFail()->body;
         $scopes = Corporate::all();
         $partners = Partner::all();
         $services = Services::all();
         $address = Contact::where('name', '=', 'Address')->firstOrFail()->description;
         $email = Contact::where('name', '=', 'Email')->firstOrFail()->description;
-        return view('tcmw/home', ['nav' => 'home'], compact('posts', 'about', 'scopes', 'partners', 'services', 'address', 'email'));
+        $sliders = Slider::all();
+        return view('tcmw/home', ['nav' => 'home'], compact('posts', 'about', 'scopes', 'partners', 'services', 'address', 'email', 'sliders'));
     }
 
     public function about()
     {
         $posts = Post::all();
-        $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
-        $vision = Page::where('slug', '=', 'vision')->firstOrFail()->body;
-        $mission = Page::where('slug', '=', 'mission')->firstOrFail()->body;
-        $structure = Page::where('slug', '=', 'structure')->firstOrFail();
+        $about = About::where('slug', '=', 'about')->firstOrFail()->body;
+        $vision = About::where('slug', '=', 'vision')->firstOrFail()->body;
+        $mission = About::where('slug', '=', 'mission')->firstOrFail()->body;
+        $structure = Structure::all()->first();
         $projects = Project::all();
         $services = Services::all();
         $partners = Partner::all();
@@ -45,7 +48,7 @@ class HomeController extends Controller
     public function contact()
     {
         $posts = Post::all();
-        $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
+        $about = About::where('slug', '=', 'about')->firstOrFail()->body;
         $contacts = Contact::all();
         $services = Services::all();
         $maps = Contact::where('icon', '=', 'maps')->firstOrFail()->description;

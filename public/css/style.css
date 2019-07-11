@@ -2163,10 +2163,12 @@ h3.bg-color {
 }
 
 .client-logo-link {
-    color: #FFFFFF80
+    font-weight: bold;
+    color: #FFFFFFCC
 }
 
 .client-logo-link:hover {
+    font-weight: bold;
     color: #FFFFFF
 }
 

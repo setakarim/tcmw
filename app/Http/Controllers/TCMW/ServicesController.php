@@ -4,16 +4,16 @@ namespace App\Http\Controllers\TCMW;
 
 use App\Http\Controllers\Controller;
 use TCG\Voyager\Models\Post;
-use TCG\Voyager\Models\Page;
 use App\Services;
 use App\Contact;
+use App\About;
 
 
 class ServicesController extends Controller
 {
     public function services() {
         $posts = Post::all();
-        $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
+        $about = About::where('slug', '=', 'about')->firstOrFail()->body;
         $services = Services::all();
         $address = Contact::where('name', '=', 'Address')->firstOrFail()->description;
         $email = Contact::where('name', '=', 'Email')->firstOrFail()->description;
@@ -22,7 +22,7 @@ class ServicesController extends Controller
 
     public function show($slug) {
         $posts = Post::all();
-        $about = Page::where('slug', '=', 'about')->firstOrFail()->body;
+        $about = About::where('slug', '=', 'about')->firstOrFail()->body;
         $services = Services::all();
         $service = Services::where('id', '=', $slug)->firstOrFail();
         $address = Contact::where('name', '=', 'Address')->firstOrFail()->description;

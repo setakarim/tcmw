@@ -19,9 +19,9 @@
 
 .nivoSlider img {
     position: absolute;
-    top: 0px;
-    left: 0px;
     max-width: none;
+    max-height: 400px;
+    object-fit: cover;
 }
 
 .nivo-main-image {
