@@ -27,6 +27,7 @@
                             </ul>
                         </div>
                         <div class="entry-body effect-loaded" style="padding-right: 10px;">
+                            <h2>{{ $service->title }}</h2>
                             <p>{!! $service->description !!}</p>
                         </div>
                     </article>
