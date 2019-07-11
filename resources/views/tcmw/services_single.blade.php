@@ -22,8 +22,7 @@
                         <div class="entry-slider">
                             <ul class="slides">
                                 @foreach (json_decode($service->image) as $item)
-                                <li><a href="/services/{{$service->id}}"><img src="{{ Voyager::image( $item ) }}"></a>
-                                </li>
+                                <li><img src="{{ Voyager::image( $item ) }}"></li>
                                 @endforeach
                             </ul>
                         </div>

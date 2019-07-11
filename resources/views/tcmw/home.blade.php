@@ -11,7 +11,7 @@
         </div>
       </div>
       @foreach ($sliders as $slider)
-      @if ($slider->description !== '')
+      @if (!empty($slider->description))
         <div id="{{ $slider->id }}_slider" class="nivo-html-caption">
             <div class="container-caption">{{ $slider->description }}</div>
         </div>
